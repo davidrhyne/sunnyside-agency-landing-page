@@ -1,0 +1,76 @@
+body {
+  background: dodgerblue;
+}
+
+img {
+  width: 200px;
+  height: auto;
+}
+
+.social__icon:hover {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(304deg) brightness(200%) contrast(102%);
+}
+
+nav {
+  clip-path: polygon(0 9%, 92% 9%, 100% 0, 100% 100%, 0 100%);
+  background: white;
+  height: 329px;
+  width: 329px;
+  position: relative;
+}
+nav ul {
+  position: absolute;
+  top: 30%;
+  list-style: none;
+  right: 50%;
+}
+nav li {
+  text-align: center;
+}
+nav a {
+  text-decoration: none;
+}
+
+.nav-toggle {
+  padding: 0.5em;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 1000;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  background: #979797;
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+  transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.hamburger::before {
+  top: 6px;
+}
+
+.hamburger::after {
+  bottom: 6px;
+}
+
+/*# sourceMappingURL=main.css.map */
