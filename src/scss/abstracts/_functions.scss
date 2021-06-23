@@ -1,0 +1,9 @@
+@use './fonts' as *;
+
+@function ff($font-name) {
+    @return map-get($fonts, $font-name)
+}
+
+@function fw($font-weight-name) {
+    @return map-get($font-weights, $font-weight-name)
+}

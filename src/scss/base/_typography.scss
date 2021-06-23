@@ -1,0 +1,33 @@
+@use '../abstracts/fonts' as *;
+@use '../abstracts/functions' as *;
+
+h1, 
+h2, 
+h3 {
+    margin: 0;
+    font-family: ff(fraunces);
+    font-weight: fw(boldest);
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 6.25px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+p {
+    font-weight: fw(semi-bold);
+    line-height: 1.6;
+}
+
+.menu-item {
+    font-size: 1.25rem;
+}
