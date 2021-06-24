@@ -1,0 +1,9 @@
+
+
+$desktop-min-witdh: 600px;
+
+@mixin mq($breakpoint) {
+    @media (min-width: $breakpoint ) {
+        @content
+    }
+}

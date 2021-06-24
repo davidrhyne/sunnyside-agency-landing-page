@@ -23,12 +23,13 @@ body {
 
 header {
     padding: 2em 1em;
-    // border: 1px magenta solid;
+    // border: 1px limegreen solid;
     background-image: url('../images/mobile/image-header.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 75%;
     height: 538px;
+    position: relative;
 }
 
 .header__logo {
@@ -51,6 +52,10 @@ header {
 
 .hide {
     display: none;
+
+    @include mq(600px) {
+        display: block;
+    }
 }
 
 .adjust-height {
@@ -59,6 +64,7 @@ header {
 
 nav {
     // display: none;
+    
     clip-path: polygon(0 9%, 92% 9%, 100% 0, 100% 100%, 0 100%);
     background: white;
     height: 329px;
@@ -66,6 +72,19 @@ nav {
     max-width: 400px;
     margin: 1em 0 0 auto;
     position: relative;
+
+    @include mq(600px) {
+        // display: inline;
+        border: 1px magenta solid;
+        clip-path: unset;
+        // background: transparent;
+        height: unset;
+        margin: 0;
+        top: 0;
+        right: 0;
+        max-width: 500px;
+        position: absolute;
+    }
     
 
     ul {
@@ -81,6 +100,21 @@ nav {
         height: 91%;
         padding: 2em 0;
         // margin-top: ;
+
+        @include mq(600px) {
+            
+            position: unset;
+            
+            flex-direction: row;
+            justify-content: unset;
+            //justify-content: center;
+            height: 100px;
+            width: 100%;
+            // top: 0;
+            // right: 0;
+            z-index: 9;
+            //width: 400px;
+        }
     }
 
     li {
@@ -92,7 +126,15 @@ nav {
        
         &:hover {
             font-family: ff(fraunces);
-            background: $primary-yellow;            
+            background: $primary-yellow;  
+                    
+        }
+
+        @include mq(600px){
+            border: 1px black solid;
+            padding: 0;
+            min-width: unset;
+            
         }
     }
 
@@ -115,6 +157,11 @@ nav {
     right: 1em;
     top: 1em;
     z-index: 1000;
+
+    @include mq(600px) {
+
+        display: none;
+    };
 }
 
 .hamburger {
@@ -160,6 +207,8 @@ nav {
     // flex-direction: column;
     padding: 3.5em 1em;
     text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
 
     p {
         color: $neutral-medium-gray;
@@ -191,10 +240,19 @@ nav {
 
     a.about--yellow::after {
         border: 4px solid lighten($primary-yellow, 30%);
+
+    }
+
+    a.about--yellow:hover::after {
+        border: 4px solid $primary-yellow;
     }
 
     a.about--red::after {
         border: 4px solid lighten($primary-red, 20%);
+    }
+
+    a.about--red:hover::after {
+        border: 4px solid $primary-red;
     }
 }
 
@@ -226,7 +284,7 @@ nav {
 
     p {
         top: 70%;
-        width: 80%;
+        max-width: 70%;
     }
 
 
@@ -234,7 +292,6 @@ nav {
 
 .service--green {
     color: $primary-desaturated-cyan;
-    
 }
 
 .service--blue {
@@ -260,6 +317,7 @@ nav {
     .testimonial {
         border: 1px solid magenta;
         padding: 3em 0 1em;
+        
 
         img {
             height: 72px;
@@ -269,7 +327,9 @@ nav {
 
         .testimonial__statement {
             color: $neutral-dark-gray;
-            padding: 2em 0 1em;
+            padding: 2em 0 1.5em;
+            max-width: 70%;
+            margin: 0 auto;
         }
 
         .testimonial__name {
@@ -299,9 +359,77 @@ nav {
 // footer styling
 footer {
     background: $primary-light-green;
+    padding: 4em 2em;
+
+    .footer__logo {
+        height: auto;
+        width: 170px;
+        display: block;
+        margin: 0 auto;
+        filter: invert(24%) sepia(75%) saturate(303%) hue-rotate(116deg) brightness(46%) contrast(90%);
+    }
+
+    ul, .socials {
+        display: flex;
+        
+    }
+
+    ul {
+        margin: 2em auto 5em;
+        
+        justify-content: space-between;
+        list-style: none;
+        max-width: 300px;
+        
+    }
+
+    a {
+        text-decoration: none;
+        color: $primary-moderate-cyan;
+        letter-spacing: -.13px;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .social__icon + .social__icon {
+        
+        margin-left: 1.5em;
+    }
 
 }
 
 .social__icon:hover {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(304deg) brightness(200%) contrast(102%)
+}
+
+
+.attribution {
+    color: $neutral-dark-blue;
+    margin: 3em auto 2em;
+    width: 400px;
+    text-align: center;
+    
+
+    span {
+        display: block;
+        margin-top: 1em;
+    }
+
+    a {
+        text-decoration: none;
+        color: $primary-blue;
+        font-weight: fw(boldest);
+        font-family: ff(fraunces);
+
+        &:hover {
+            color: $neutral-dark-gray;
+            text-decoration: underline;
+        }
+    }
 }
