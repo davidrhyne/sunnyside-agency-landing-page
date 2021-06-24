@@ -53,10 +53,34 @@ header {
   height: 538px;
   position: relative;
 }
+@media (min-width: 750px) {
+  header {
+    padding: 2em;
+  }
+}
+@media (min-width: 600px) {
+  header {
+    background-image: url("../images/desktop/image-header.jpg");
+    height: 700px;
+    width: auto;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1000px) {
+  header {
+    height: 800px;
+    max-width: 1440px;
+  }
+}
 
 .header__logo {
   height: 24px;
   width: auto;
+}
+@media (min-width: 750px) {
+  .header__logo {
+    height: 33px;
+  }
 }
 
 .header__title {
@@ -64,18 +88,35 @@ header {
   text-align: center;
   margin-top: 2em;
 }
+@media (min-width: 750px) {
+  .header__title {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1000px) {
+  .header__title {
+    height: 3.5rem;
+  }
+}
 
 .header__arrow {
   width: 30px;
   height: auto;
-  display: block;
-  margin: 3em auto 0;
+  content: "";
+  position: absolute;
+  top: calc(65% - 4em);
+  right: calc(50% - 15px);
+}
+@media (min-width: 600px) {
+  .header__arrow {
+    top: calc(58% - 4em);
+  }
 }
 
 .hide {
   display: none;
 }
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   .hide {
     display: block;
   }
@@ -94,16 +135,21 @@ nav {
   margin: 1em 0 0 auto;
   position: relative;
 }
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   nav {
-    border: 1px magenta solid;
     clip-path: unset;
+    background: transparent;
     height: unset;
     margin: 0;
     top: 0;
     right: 0;
-    max-width: 500px;
+    max-width: 425px;
     position: absolute;
+  }
+}
+@media (min-width: 1000px) {
+  nav {
+    max-width: 550px;
   }
 }
 nav ul {
@@ -117,13 +163,13 @@ nav ul {
   height: 91%;
   padding: 2em 0;
 }
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   nav ul {
+    padding: 1.2em 1em 2em 0;
     position: unset;
+    justify-content: end;
     flex-direction: row;
-    justify-content: unset;
     height: 100px;
-    width: 100%;
     z-index: 9;
   }
 }
@@ -138,11 +184,21 @@ nav li:hover {
   font-family: "Fraunces";
   background: #fad400;
 }
-@media (min-width: 600px) {
+@media (min-width: 750px) {
+  nav li:hover {
+    background: #78CEF5;
+  }
+}
+@media (min-width: 750px) {
   nav li {
-    border: 1px black solid;
-    padding: 0;
+    padding: 0.75em 1em 2em;
     min-width: unset;
+    margin: 0;
+  }
+}
+@media (min-width: 1000px) {
+  nav li {
+    padding: 0.75em 1.75em 2em;
   }
 }
 nav a {
@@ -151,6 +207,17 @@ nav a {
 }
 nav a:hover {
   color: #23303e;
+}
+@media (min-width: 750px) {
+  nav a:hover {
+    color: #fff;
+  }
+}
+@media (min-width: 750px) {
+  nav a {
+    color: #fff;
+    font-size: 1.125rem;
+  }
 }
 
 .nav-toggle {
@@ -163,7 +230,7 @@ nav a:hover {
   top: 1em;
   z-index: 1000;
 }
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   .nav-toggle {
     display: none;
   }
