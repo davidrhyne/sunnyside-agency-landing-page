@@ -2,9 +2,9 @@
 @use './base/typography' as *;
 
 $blue: dodgerblue;
-$tablet-break: 600px;
-$menu-break: 750px;
-$desktop-break: 1000px;
+// $tablet-break: 600px;
+// $menu-break: 750px;
+// $desktop-break: 1000px;
 
 html {
     scroll-behavior: smooth;
@@ -12,8 +12,9 @@ html {
 
 body {
     // background: $blue;
-    font-family: ff(barlow);
-    font-size: 1.125rem;
+
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 // img {
@@ -33,6 +34,7 @@ header {
     background-position: 50% 75%;
     height: 538px;
     position: relative;
+    
 
     @include mq($menu-break) {
         padding: 2em;
@@ -47,7 +49,7 @@ header {
 
     @include mq($desktop-break) {
         height: 800px;
-        max-width: 1440px;
+       
     }
 }
 
@@ -67,13 +69,15 @@ header {
     margin-top: 2em;
 
     @include mq($menu-break) {
-        font-size: 3rem;
+        // font-size: 3rem;
+        margin-top: 2.3em;
+        // letter-spacing: 8px;
     }
 
-    @include mq($desktop-break) {
-        height: 3.5rem;
-        
-    }
+    // @include mq($desktop-break) {
+    //     font-size: 3.5rem;
+    //     letter-spacing: 8.75px;        
+    // }
 }
 
 .header__arrow {
@@ -285,23 +289,64 @@ nav {
 
 // abouts styling
 
-.about__image {
-    height: auto;
-    width: 100%;
+.abouts {
+    @include mq($menu-break) {
+        display: grid;
+        grid-template-columns: repeat(2,minmax(300px, 720px));
+        // grid-template-rows: 500px 500px;
+        grid-template-areas: 
+            "about1 image1"
+            "image2 about2"
+            ;
+    };
 }
 
+.about__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.about__image--one { grid-area: image1; }
+.about__image--two { grid-area: image2; }
+.about1 { grid-area: about1; }
+.about2 { grid-area: about2; }
+
 .about {
+    
+    border: 1px purple solid;
     color: $neutral-dark-blue;
     // display: flex;
     // flex-direction: column;
-    padding: 3.5em 1em;
+    padding: 3.5em 0;
     text-align: center;
     max-width: 80%;
-    margin: 0 auto;
+    margin: auto;
+
+        // @include mq($tablet-break) {
+        //     text-align: left;
+        //     max-width: 70%;
+        //     // min-height: 530px;
+        //     padding: 1.5em;
+        //     max-width: unset;
+        // }
+
+        @include mq($menu-break) {
+            text-align: left;
+            max-width: 70%;
+            // min-height: 530px;
+            padding: 1.5em;
+            max-width: 80%;
+           
+        }
 
     p {
         color: $neutral-medium-gray;
         padding: 1.5em 0;
+
+        @include mq($menu-break) {
+            text-align: left;
+        }
     }
 
     a {
@@ -313,6 +358,11 @@ nav {
         font-weight: fw(boldest);
         position: relative;
         display: block;
+
+        @include mq($menu-break) {
+            text-align: left;
+            margin-left: 1em;
+        }
     }
 
     a::after {
@@ -325,6 +375,11 @@ nav {
         z-index: -1;
         right: calc(50% - 60px);
         border-radius: 10px;
+
+        @include mq($menu-break) {
+            left: -9px;
+        }
+
     }
 
     a.about--yellow::after {
@@ -348,13 +403,35 @@ nav {
 
 // services styling 
 
-.service__image {
-    width: 100%;
-    height: auto;
-    
+.services {
+    @include mq($menu-break) {
+        display: flex;
+
+    };
+
 }
 
 .service {
+    width: 100%;
+    height: auto;
+    
+    
+    // img {
+    //     object-fit:fill;
+    // }
+
+    // @include mq($menu-break) {
+    //     height: auto;      
+        
+
+    // };
+}
+
+
+
+.service {
+    // border: 1px solid pink;
+    
     position: relative;
     display: flex;
     justify-content: center;
@@ -362,21 +439,83 @@ nav {
 
     h3
     ,p    {
+        
         content: '';
-        position: absolute;      
+        position: absolute;    
     }
 
     h3 {
         top: 60%;
+
+        @include mq($menu-break) {
+            font-size: 1.5rem;
+            top: 55%;
+        };
+
+        @include mq($small-desktop-break) {
+            font-size: 1.75rem;
+            
+        };
+
+        @include mq($desktop-break) {
+            font-size: 2rem;  
+            top: 57%;          
+        };
+
+        @include mq($large-desktop-break) {
+            top: 60%;        
+        };
 
     }
 
     p {
         top: 70%;
         max-width: 70%;
+        
+ 
+        @include mq($menu-break) {
+            top: 65%;
+            font-size: .9375rem;
+            max-width: 80%;
+        };
+
+        @include mq($small-desktop-break) {
+            font-size: 1rem;
+            top: 68%;
+        };
+
+        @include mq($desktop-break) {            
+            font-size: 1.125rem;
+            top: 70%;
+            max-width: 65%;
+        };
+
+        @include mq($large-desktop-break) {
+            font-size: 1.125rem;
+            max-width: 60%;
+        };
     }
 
 
+
+    // .service__image--mobile {
+    //     width: auto;
+    //     height: 100%;
+    //     display: inline-block;
+    //     @include mq($desktop-break) {
+    //         display: none; 
+    //     }
+    // }
+    
+    // .service__image--desktop {
+    //     // width: auto;
+    //     // height: 100%;
+    //     display: none;
+    //     // @include mq($desktop-break) {
+    //     //     display: inline-block;
+    //     //     max-height: 600px;
+    //     // }
+    // }
 }
 
 .service--green {
@@ -440,7 +579,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
 
-    img {
+    picture {
         width: 50%;
     }
 }

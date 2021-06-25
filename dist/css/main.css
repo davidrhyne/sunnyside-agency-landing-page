@@ -4,6 +4,12 @@
   padding: 0;
 }
 
+body {
+  font-family: "Barlow";
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
 h1,
 h2,
 h3 {
@@ -16,6 +22,18 @@ h1 {
   font-size: 2.5rem;
   letter-spacing: 6.25px;
   text-transform: uppercase;
+}
+@media (min-width: 750px) {
+  h1 {
+    font-size: 3rem;
+    letter-spacing: 8px;
+  }
+}
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 3.5rem;
+    letter-spacing: 8.75px;
+  }
 }
 
 h2 {
@@ -40,8 +58,8 @@ html {
 }
 
 body {
-  font-family: "Barlow";
-  font-size: 1.125rem;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 header {
@@ -69,7 +87,6 @@ header {
 @media (min-width: 1000px) {
   header {
     height: 800px;
-    max-width: 1440px;
   }
 }
 
@@ -90,12 +107,7 @@ header {
 }
 @media (min-width: 750px) {
   .header__title {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 1000px) {
-  .header__title {
-    height: 3.5rem;
+    margin-top: 2.3em;
   }
 }
 
@@ -269,21 +281,60 @@ nav a:hover {
   bottom: 8px;
 }
 
+@media (min-width: 750px) {
+  .abouts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 720px));
+    grid-template-areas: "about1 image1" "image2 about2";
+  }
+}
+
 .about__image {
-  height: auto;
+  height: 100%;
   width: 100%;
+  object-fit: cover;
+}
+
+.about__image--one {
+  grid-area: image1;
+}
+
+.about__image--two {
+  grid-area: image2;
+}
+
+.about1 {
+  grid-area: about1;
+}
+
+.about2 {
+  grid-area: about2;
 }
 
 .about {
+  border: 1px purple solid;
   color: #23303e;
-  padding: 3.5em 1em;
+  padding: 3.5em 0;
   text-align: center;
   max-width: 80%;
-  margin: 0 auto;
+  margin: auto;
+}
+@media (min-width: 750px) {
+  .about {
+    text-align: left;
+    max-width: 70%;
+    padding: 1.5em;
+    max-width: 80%;
+  }
 }
 .about p {
   color: #818498;
   padding: 1.5em 0;
+}
+@media (min-width: 750px) {
+  .about p {
+    text-align: left;
+  }
 }
 .about a {
   text-decoration: none;
@@ -295,6 +346,12 @@ nav a:hover {
   position: relative;
   display: block;
 }
+@media (min-width: 750px) {
+  .about a {
+    text-align: left;
+    margin-left: 1em;
+  }
+}
 .about a::after {
   content: "";
   display: block;
@@ -305,6 +362,11 @@ nav a:hover {
   z-index: -1;
   right: calc(50% - 60px);
   border-radius: 10px;
+}
+@media (min-width: 750px) {
+  .about a::after {
+    left: -9px;
+  }
 }
 .about a.about--yellow::after {
   border: 4px solid #ffef94;
@@ -319,7 +381,13 @@ nav a:hover {
   border: 4px solid #fe7867;
 }
 
-.service__image {
+@media (min-width: 750px) {
+  .services {
+    display: flex;
+  }
+}
+
+.service {
   width: 100%;
   height: auto;
 }
@@ -337,9 +405,57 @@ nav a:hover {
 .service h3 {
   top: 60%;
 }
+@media (min-width: 750px) {
+  .service h3 {
+    font-size: 1.5rem;
+    top: 55%;
+  }
+}
+@media (min-width: 900px) {
+  .service h3 {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 1000px) {
+  .service h3 {
+    font-size: 2rem;
+    top: 57%;
+  }
+}
+@media (min-width: 1200px) {
+  .service h3 {
+    top: 60%;
+  }
+}
 .service p {
   top: 70%;
   max-width: 70%;
+}
+@media (min-width: 750px) {
+  .service p {
+    top: 65%;
+    font-size: 0.9375rem;
+    max-width: 80%;
+  }
+}
+@media (min-width: 900px) {
+  .service p {
+    font-size: 1rem;
+    top: 68%;
+  }
+}
+@media (min-width: 1000px) {
+  .service p {
+    font-size: 1.125rem;
+    top: 70%;
+    max-width: 65%;
+  }
+}
+@media (min-width: 1200px) {
+  .service p {
+    font-size: 1.125rem;
+    max-width: 60%;
+  }
 }
 
 .service--green {
@@ -391,7 +507,7 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
 }
-.gallery img {
+.gallery picture {
   width: 50%;
 }
 

@@ -1,6 +1,10 @@
 
 
-$desktop-min-witdh: 600px;
+$tablet-break: 600px;
+$menu-break: 750px;
+$small-desktop-break: 900px;
+$desktop-break: 1000px;
+$large-desktop-break: 1200px;
 
 @mixin mq($breakpoint) {
     @media (min-width: $breakpoint ) {
