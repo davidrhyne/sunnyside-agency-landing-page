@@ -39,6 +39,11 @@ h1 {
 h2 {
   font-size: 2rem;
 }
+@media (min-width: 1000px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}
 
 h3 {
   font-size: 1.75rem;
@@ -47,10 +52,6 @@ h3 {
 p {
   font-weight: 600;
   line-height: 1.6;
-}
-
-.menu-item {
-  font-size: 1.25rem;
 }
 
 html {
@@ -293,6 +294,7 @@ nav a:hover {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .about__image--one {
@@ -314,9 +316,9 @@ nav a:hover {
 .about {
   border: 1px purple solid;
   color: #23303e;
-  padding: 3.5em 0;
+  padding: 4em 0;
   text-align: center;
-  max-width: 80%;
+  max-width: 85%;
   margin: auto;
 }
 @media (min-width: 750px) {
@@ -325,6 +327,11 @@ nav a:hover {
     max-width: 70%;
     padding: 1.5em;
     max-width: 80%;
+  }
+}
+@media (min-width: 1000px) {
+  .about {
+    max-width: 65%;
   }
 }
 .about p {
@@ -403,7 +410,7 @@ nav a:hover {
   position: absolute;
 }
 .service h3 {
-  top: 60%;
+  top: 65%;
 }
 @media (min-width: 750px) {
   .service h3 {
@@ -428,8 +435,9 @@ nav a:hover {
   }
 }
 .service p {
-  top: 70%;
-  max-width: 70%;
+  top: 75%;
+  max-width: 90%;
+  font-size: 1rem;
 }
 @media (min-width: 750px) {
   .service p {
@@ -471,6 +479,17 @@ nav a:hover {
   text-align: center;
   color: #a7abae;
 }
+@media (min-width: 1000px) {
+  .testimonials {
+    padding: 8em;
+  }
+}
+@media (min-width: 1000px) {
+  .testimonials .testimonial-list {
+    display: flex;
+    flex-direction: row;
+  }
+}
 .testimonials .section__title {
   font-family: "Fraunces";
   font-weight: 900;
@@ -490,8 +509,19 @@ nav a:hover {
 .testimonials .testimonial .testimonial__statement {
   color: #5a636c;
   padding: 2em 0 1.5em;
-  max-width: 70%;
   margin: 0 auto;
+}
+@media (min-width: 750px) {
+  .testimonials .testimonial .testimonial__statement {
+    padding: 3em 0 2em;
+    max-width: 50%;
+  }
+}
+@media (min-width: 1000px) {
+  .testimonials .testimonial .testimonial__statement {
+    max-width: 90%;
+    padding: 4em 0 4em;
+  }
 }
 .testimonials .testimonial .testimonial__name {
   font-family: "Fraunces";
@@ -509,6 +539,16 @@ nav a:hover {
 }
 .gallery picture {
   width: 50%;
+}
+@media (min-width: 1000px) {
+  .gallery picture {
+    width: 25%;
+  }
+}
+.gallery img {
+  display: block;
+  width: 100%;
+  object-fit: fill;
 }
 
 footer {

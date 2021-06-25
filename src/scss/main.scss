@@ -305,6 +305,7 @@ nav {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .about__image--one { grid-area: image1; }
@@ -318,9 +319,9 @@ nav {
     color: $neutral-dark-blue;
     // display: flex;
     // flex-direction: column;
-    padding: 3.5em 0;
+    padding: 4em 0;
     text-align: center;
-    max-width: 80%;
+    max-width: 85%;
     margin: auto;
 
         // @include mq($tablet-break) {
@@ -337,6 +338,11 @@ nav {
             // min-height: 530px;
             padding: 1.5em;
             max-width: 80%;
+           
+        }
+
+        @include mq($desktop-break) {
+            max-width: 65%;
            
         }
 
@@ -445,7 +451,7 @@ nav {
     }
 
     h3 {
-        top: 60%;
+        top: 65%;
 
         @include mq($menu-break) {
             font-size: 1.5rem;
@@ -469,9 +475,9 @@ nav {
     }
 
     p {
-        top: 70%;
-        max-width: 70%;
-        
+        top: 75%;
+        max-width: 90%;
+        font-size: 1rem;
  
         @include mq($menu-break) {
             top: 65%;
@@ -532,6 +538,19 @@ nav {
     padding: 3.5em 1em;
     text-align: center;
     color: $neutral-light-gray;
+    
+    @include mq($desktop-break) {
+        padding: 8em;
+
+    }
+
+
+    .testimonial-list {
+        @include mq($desktop-break) {
+            display: flex;
+            flex-direction: row;
+        }
+    }
 
     .section__title {
         font-family: ff(fraunces);
@@ -556,8 +575,18 @@ nav {
         .testimonial__statement {
             color: $neutral-dark-gray;
             padding: 2em 0 1.5em;
-            max-width: 70%;
+            //max-width: 90%;
             margin: 0 auto;
+
+            @include mq($menu-break) {
+                padding: 3em 0 2em;
+                max-width: 50%;
+            }
+            
+            @include mq($desktop-break) {
+                max-width: 90%;
+                padding: 4em 0 4em;
+            }
         }
 
         .testimonial__name {
@@ -576,11 +605,26 @@ nav {
 // gallery styling
 
 .gallery {
+    // margin: 0;
+    // padding: 0;
+    // box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
 
     picture {
         width: 50%;
+
+        @include mq($desktop-break) {
+            width: 25%;
+        }
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        //height: auto;
+        // height: auto;
+        object-fit: fill;
     }
 }
 
@@ -588,6 +632,7 @@ nav {
 footer {
     background: $primary-light-green;
     padding: 4em 2em;
+
 
     .footer__logo {
         height: auto;
@@ -604,7 +649,6 @@ footer {
 
     ul {
         margin: 2em auto 5em;
-        
         justify-content: space-between;
         list-style: none;
         max-width: 300px;

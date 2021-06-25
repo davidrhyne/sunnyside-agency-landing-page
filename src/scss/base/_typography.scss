@@ -43,9 +43,9 @@ h2 {
     //     font-size: 1.675rem;
     // }
 
-    // @include mq($desktop-break) {
-    //     font-size: 2.5rem;
-    // }
+    @include mq($desktop-break) {
+        font-size: 2.5rem;
+    }
 
 }
 
@@ -71,6 +71,6 @@ p {
 
 }
 
-.menu-item {
-    font-size: 1.25rem;
-}
+// .about__statement {
+//     font-size: 1rem;
+// }
