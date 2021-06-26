@@ -481,7 +481,12 @@ nav a:hover {
 }
 @media (min-width: 1000px) {
   .testimonials {
-    padding: 8em;
+    padding: 5em;
+  }
+}
+@media (min-width: 1200px) {
+  .testimonials {
+    padding: 8.8em;
   }
 }
 @media (min-width: 1000px) {
@@ -500,6 +505,11 @@ nav a:hover {
 .testimonials .testimonial {
   border: 1px solid magenta;
   padding: 3em 0 1em;
+}
+@media (min-width: 1200px) {
+  .testimonials .testimonial {
+    margin: 0 1em;
+  }
 }
 .testimonials .testimonial img {
   height: 72px;

@@ -540,7 +540,12 @@ nav {
     color: $neutral-light-gray;
     
     @include mq($desktop-break) {
-        padding: 8em;
+        padding: 5em;
+
+    }
+    
+    @include mq($large-desktop-break) {
+        padding: 8.8em;
 
     }
 
@@ -549,6 +554,7 @@ nav {
         @include mq($desktop-break) {
             display: flex;
             flex-direction: row;
+            
         }
     }
 
@@ -564,6 +570,12 @@ nav {
     .testimonial {
         border: 1px solid magenta;
         padding: 3em 0 1em;
+        
+        
+        @include mq($large-desktop-break) {
+            margin: 0 1em;
+        }
+        
         
 
         img {
