@@ -6,40 +6,22 @@
 .services {
     @include mq($menu-break) {
         display: flex;
-
     };
-
 }
 
 .service {
     width: 100%;
     height: auto;
-    
-    
-    // img {
-    //     object-fit:fill;
-    // }
-
-    // @include mq($menu-break) {
-    //     height: auto;      
-        
-
-    // };
 }
 
-
-
-.service {
-    // border: 1px solid pink;
-    
+.service {    
     position: relative;
     display: flex;
     justify-content: center;
     text-align: center;
 
     h3
-    ,p    {
-        
+    ,p    {        
         content: '';
         position: absolute;    
     }
@@ -65,7 +47,6 @@
         @include mq($large-desktop-break) {
             top: 60%;        
         };
-
     }
 
     p {
@@ -95,27 +76,6 @@
             max-width: 60%;
         };
     }
-
-
-
-    // .service__image--mobile {
-    //     width: auto;
-    //     height: 100%;
-    //     display: inline-block;
-    //     @include mq($desktop-break) {
-    //         display: none; 
-    //     }
-    // }
-    
-    // .service__image--desktop {
-    //     // width: auto;
-    //     // height: 100%;
-    //     display: none;
-    //     // @include mq($desktop-break) {
-    //     //     display: inline-block;
-    //     //     max-height: 600px;
-    //     // }
-    // }
 }
 
 .service--green {

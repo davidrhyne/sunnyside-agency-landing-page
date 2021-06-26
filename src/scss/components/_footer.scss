@@ -6,26 +6,24 @@ footer {
     background: $primary-light-green;
     padding: 4em 2em;
 
-
     .footer__logo {
         height: auto;
         width: 170px;
         display: block;
         margin: 0 auto;
+        // change the color of SVG file to color matching primary-desaturated-cyan
         filter: invert(24%) sepia(75%) saturate(303%) hue-rotate(116deg) brightness(46%) contrast(90%);
     }
 
     ul, .socials {
-        display: flex;
-        
+        display: flex;        
     }
 
     ul {
         margin: 2em auto 5em;
         justify-content: space-between;
         list-style: none;
-        max-width: 300px;
-        
+        max-width: 300px;        
     }
 
     a {
@@ -42,13 +40,13 @@ footer {
         justify-content: center;
     }
 
-    .social__icon + .social__icon {
-        
+    .social__icon + .social__icon {        
         margin-left: 1.5em;
     }
 
 }
 
 .social__icon:hover {
+    // change the color of SVG file to white on hover
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(304deg) brightness(200%) contrast(102%)
 }

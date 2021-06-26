@@ -132,7 +132,7 @@ header {
 
 nav {
   clip-path: polygon(0 9%, 92% 9%, 100% 0, 100% 100%, 0 100%);
-  background: white;
+  background: #fff;
   height: 329px;
   width: 100%;
   max-width: 400px;
@@ -305,7 +305,6 @@ nav a:hover {
 }
 
 .about {
-  border: 1px purple solid;
   color: #23303e;
   padding: 4em 0;
   text-align: center;
@@ -494,7 +493,6 @@ nav a:hover {
   letter-spacing: 4px;
 }
 .testimonials .testimonial {
-  border: 1px solid magenta;
   padding: 3em 0 1em;
 }
 @media (min-width: 1200px) {
@@ -511,6 +509,11 @@ nav a:hover {
   color: #5a636c;
   padding: 2em 0 1.5em;
   margin: 0 auto;
+}
+@media (min-width: 600px) {
+  .testimonials .testimonial .testimonial__statement {
+    max-width: 80%;
+  }
 }
 @media (min-width: 750px) {
   .testimonials .testimonial .testimonial__statement {

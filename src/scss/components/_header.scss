@@ -57,23 +57,8 @@ header {
     right: calc(50% - 15px);
 
     @include mq($tablet-break) {
-        // margin: 20% auto 0;
-        // content: "";
-        // position: absolute;
-        // top: 40%;
-        // right: 50%;
-
         top: calc(58% - 4em);
     }
-
-    // @include mq($menu-break) {
-    //     margin: 6em auto 0;
-    // }
-
-    // @include mq($desktop-break) {
-    //     margin: 8em auto 0;;
-        
-    // }
 }
 
 .hide {
@@ -89,11 +74,9 @@ header {
 }
 
 nav {
-    // display: none;
-    
+    // for the shape of the menu container    
     clip-path: polygon(0 9%, 92% 9%, 100% 0, 100% 100%, 0 100%);
-    background: white;
-    
+    background: $white;    
     height: 329px;
     width: 100%;
     max-width: 400px;
@@ -101,8 +84,6 @@ nav {
     position: relative;
 
     @include mq($menu-break) {
-        // display: inline;
-        // border: 1px magenta solid;
         clip-path: unset;
         background:transparent;
         height: unset;
@@ -114,39 +95,27 @@ nav {
     }
     
     @include mq($desktop-break) {
-
-        max-width: 550px;
-        
+        max-width: 550px;        
     }
 
-
     ul {
-        //box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-//        align-content: center;
         position: absolute;
         list-style: none;
         width: 100%;
         top: 9%;
         height: 91%;
         padding: 2em 0;
-        // margin-top: ;
 
         @include mq($menu-break) {
             padding: 1.2em 1em 2em 0;
             position: unset;
             justify-content: end;
             flex-direction: row;
-
             height: 100px;
-            //width: 100%;
-            // top: 0;
-            // right: 0;
             z-index: 9;
-            //padding: 0 ;
-            //width: 400px;
         }
     }
 
@@ -162,28 +131,19 @@ nav {
             background: $primary-yellow;  
             
             @include mq($menu-break) {
-                // background: lighten($primary-blue, 50%);  
                 background: $primary-light-blue;
             }
         }
 
         @include mq($menu-break){
-
-            // border: 1px black solid;
             padding: .75em 1em 2em;
             min-width: unset;
-            margin: 0;
-            
+            margin: 0;            
         }
 
         @include mq($desktop-break){
-
-            // border: 1px black solid;
-            padding: .75em 1.75em 2em;
-           
-            
-        }
-        
+            padding: .75em 1.75em 2em;   
+        }        
     }
 
     a {
@@ -198,13 +158,11 @@ nav {
         }
 
         @include mq($menu-break) {
-            // border: 1px red solid;
             color: $white;            
             font-size: 1.125rem;
         }
     }
 }
-
 
 .nav-toggle {
     padding: 2em .5em;
@@ -222,6 +180,8 @@ nav {
     };
 }
 
+// hamburger styling
+
 .hamburger {
     display: block;
     position: relative;
@@ -234,11 +194,9 @@ nav {
 .hamburger::after {
     background: $white;
     width: 2em;
-    // height: 2px;
     border-radius: 1em;
     transition: transform 250ms ease-in-out;
 }
-
 
 .hamburger::before,
 .hamburger::after {

@@ -10,20 +10,17 @@
     
     @include mq($desktop-break) {
         padding: 5em;
-
     }
     
     @include mq($large-desktop-break) {
         padding: 8.8em;
-
     }
 
 
     .testimonial-list {
         @include mq($desktop-break) {
             display: flex;
-            flex-direction: row;
-            
+            flex-direction: row;           
         }
     }
 
@@ -37,15 +34,11 @@
     }
 
     .testimonial {
-        border: 1px solid magenta;
-        padding: 3em 0 1em;
-        
+        padding: 3em 0 1em;        
         
         @include mq($large-desktop-break) {
             margin: 0 1em;
-        }
-        
-        
+        }               
 
         img {
             height: 72px;
@@ -56,8 +49,11 @@
         .testimonial__statement {
             color: $neutral-dark-gray;
             padding: 2em 0 1.5em;
-            //max-width: 90%;
             margin: 0 auto;
+
+            @include mq($tablet-break) {
+                max-width: 80%;
+            }
 
             @include mq($menu-break) {
                 padding: 3em 0 2em;
