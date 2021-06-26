@@ -1,9 +1,11 @@
 @use './fonts' as *;
 
+// function for setting font family
 @function ff($font-name) {
     @return map-get($fonts, $font-name)
-}
+};
 
+// function for setting font weight
 @function fw($font-weight-name) {
     @return map-get($font-weights, $font-weight-name)
-}
+};

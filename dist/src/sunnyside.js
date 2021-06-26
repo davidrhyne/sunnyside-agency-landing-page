@@ -25,6 +25,5 @@ menu.addEventListener('click', handleMenuClick)
 // for hiding the menu after an option was selected
 menuItems.forEach(el => el.addEventListener('click', handleMenuClick))
 
-
 // on load
 nav.classList.add('hide')

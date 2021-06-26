@@ -1,11 +1,11 @@
-
-
+// breakpoints
 $tablet-break: 600px;
 $menu-break: 750px;
 $small-desktop-break: 900px;
 $desktop-break: 1000px;
 $large-desktop-break: 1200px;
 
+// media query
 @mixin mq($breakpoint) {
     @media (min-width: $breakpoint ) {
         @content

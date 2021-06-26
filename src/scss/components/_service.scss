@@ -1,0 +1,127 @@
+@use '../abstracts/index' as *;
+@use '../base/index' as *;
+
+// services styling 
+
+.services {
+    @include mq($menu-break) {
+        display: flex;
+
+    };
+
+}
+
+.service {
+    width: 100%;
+    height: auto;
+    
+    
+    // img {
+    //     object-fit:fill;
+    // }
+
+    // @include mq($menu-break) {
+    //     height: auto;      
+        
+
+    // };
+}
+
+
+
+.service {
+    // border: 1px solid pink;
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    h3
+    ,p    {
+        
+        content: '';
+        position: absolute;    
+    }
+
+    h3 {
+        top: 65%;
+
+        @include mq($menu-break) {
+            font-size: 1.5rem;
+            top: 55%;
+        };
+
+        @include mq($small-desktop-break) {
+            font-size: 1.75rem;
+            
+        };
+
+        @include mq($desktop-break) {
+            font-size: 2rem;  
+            top: 57%;          
+        };
+
+        @include mq($large-desktop-break) {
+            top: 60%;        
+        };
+
+    }
+
+    p {
+        top: 75%;
+        max-width: 90%;
+        font-size: 1rem;
+ 
+        @include mq($menu-break) {
+            top: 65%;
+            font-size: .9375rem;
+            max-width: 80%;
+        };
+
+        @include mq($small-desktop-break) {
+            font-size: 1rem;
+            top: 68%;
+        };
+
+        @include mq($desktop-break) {            
+            font-size: 1.125rem;
+            top: 70%;
+            max-width: 65%;
+        };
+
+        @include mq($large-desktop-break) {
+            font-size: 1.125rem;
+            max-width: 60%;
+        };
+    }
+
+
+
+    // .service__image--mobile {
+    //     width: auto;
+    //     height: 100%;
+    //     display: inline-block;
+    //     @include mq($desktop-break) {
+    //         display: none; 
+    //     }
+    // }
+    
+    // .service__image--desktop {
+    //     // width: auto;
+    //     // height: 100%;
+    //     display: none;
+    //     // @include mq($desktop-break) {
+    //     //     display: inline-block;
+    //     //     max-height: 600px;
+    //     // }
+    // }
+}
+
+.service--green {
+    color: $primary-desaturated-cyan;
+}
+
+.service--blue {
+    color: $primary-blue;
+}

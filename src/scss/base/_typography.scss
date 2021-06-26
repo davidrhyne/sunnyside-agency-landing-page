@@ -35,18 +35,9 @@ h1 {
 h2 {
     font-size: 2rem;
 
-    // @include mq($tablet-break) {
-    //     font-size: 1.5rem;
-    // }
-
-    // @include mq($menu-break) {
-    //     font-size: 1.675rem;
-    // }
-
     @include mq($desktop-break) {
         font-size: 2.5rem;
     }
-
 }
 
 h3 {
@@ -56,21 +47,4 @@ h3 {
 p {
     font-weight: fw(semi-bold);
     line-height: 1.6;
-
-    // @include mq($tablet-break) {
-    //     font-size: 1rem;
-    // }
-
-    // @include mq($menu-break) {
-    //     font-size: 1.125rem;
-    // }
-
-    // @include mq($desktop-break) {
-    //     font-size: 1.125rem;
-    // }
-
 }
-
-// .about__statement {
-//     font-size: 1rem;
-// }

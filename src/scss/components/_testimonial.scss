@@ -1,0 +1,84 @@
+@use '../abstracts/index' as *;
+@use '../base/index' as *;
+
+// testimonial styling
+
+.testimonials {
+    padding: 3.5em 1em;
+    text-align: center;
+    color: $neutral-light-gray;
+    
+    @include mq($desktop-break) {
+        padding: 5em;
+
+    }
+    
+    @include mq($large-desktop-break) {
+        padding: 8.8em;
+
+    }
+
+
+    .testimonial-list {
+        @include mq($desktop-break) {
+            display: flex;
+            flex-direction: row;
+            
+        }
+    }
+
+    .section__title {
+        font-family: ff(fraunces);
+        font-weight: fw(boldest);
+        
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;        
+    }
+
+    .testimonial {
+        border: 1px solid magenta;
+        padding: 3em 0 1em;
+        
+        
+        @include mq($large-desktop-break) {
+            margin: 0 1em;
+        }
+        
+        
+
+        img {
+            height: 72px;
+            width: auto;
+            border-radius: 50px;
+        }
+
+        .testimonial__statement {
+            color: $neutral-dark-gray;
+            padding: 2em 0 1.5em;
+            //max-width: 90%;
+            margin: 0 auto;
+
+            @include mq($menu-break) {
+                padding: 3em 0 2em;
+                max-width: 50%;
+            }
+            
+            @include mq($desktop-break) {
+                max-width: 90%;
+                padding: 4em 0 4em;
+            }
+        }
+
+        .testimonial__name {
+            font-family: ff(fraunces);
+            font-weight: fw(boldest);
+            color: $neutral-dark-blue;
+            margin-bottom: .6em;
+        }
+
+        .testimonial__title {
+            font-size: .875rem;
+        }
+    }
+}
