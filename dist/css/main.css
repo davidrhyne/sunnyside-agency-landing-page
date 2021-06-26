@@ -180,7 +180,7 @@ nav ul {
 nav li {
   text-align: center;
   padding: 0.75em;
-  min-width: 40%;
+  max-width: 35%;
   margin: 0 auto;
   border-radius: 50px;
 }
@@ -195,14 +195,15 @@ nav li:hover {
 }
 @media (min-width: 750px) {
   nav li {
-    padding: 0.75em 1em 2em;
-    min-width: unset;
+    padding: 0.75em 1em;
+    min-width: 40%;
+    max-width: unset;
     margin: 0;
   }
 }
 @media (min-width: 1000px) {
   nav li {
-    padding: 0.75em 1.75em 2em;
+    padding: 0.75em 1.75em;
   }
 }
 nav a {

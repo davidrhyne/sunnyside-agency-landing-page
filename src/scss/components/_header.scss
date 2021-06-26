@@ -122,7 +122,7 @@ nav {
     li {
         text-align: center;
         padding: .75em;
-        min-width: 40%;
+        max-width: 35%;                
         margin: 0 auto;
         border-radius: 50px;
        
@@ -136,13 +136,14 @@ nav {
         }
 
         @include mq($menu-break){
-            padding: .75em 1em 2em;
-            min-width: unset;
+            padding: .75em 1em;
+            min-width: 40%;
+            max-width: unset;
             margin: 0;            
         }
 
         @include mq($desktop-break){
-            padding: .75em 1.75em 2em;   
+            padding: .75em 1.75em;   
         }        
     }
 

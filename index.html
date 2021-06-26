@@ -5,41 +5,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./dist/images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
     rel="stylesheet">
   <title>Frontend Mentor | Sunnyside agency landing page</title>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="./dist/css/main.css">
 </head>
 
 <body>
 
   <header>
-    <img class="header__logo" src="./images/logo.svg" alt="">
+    <img class="header__logo" src="./dist/images/logo.svg" alt="">
     <button class="nav-toggle" id="nav-toggle" aria-label="toggle navigation">
       <span class="hamburger" id="hamburger"></span>
     </button>
 
     <nav id="nav">
       <ul>
-        <li class="menu-item"><a href="#about">About</a> </li>
-        <li class="menu-item"><a href="#services">Services</a></li>
-        <li class="menu-item"><a href="#testimonials">Projects</a></li>
-        <li class="menu-item"><a href="#contact">Contact</a></li>
+        <a href="#about"><li class="menu-item">About</li></a> 
+        <a href="#services"><li class="menu-item">Services</li></a>
+        <a href="#testimonials"><li class="menu-item">Projects</li></a>
+        <a href="#contact"><li class="menu-item">Contact</li></a>
       </ul>
     </nav>
     <h1 class="header__title" id="header__title">We are creatives</h1>
-    <img class="header__arrow" id="header__arrow" src="./images/icon-arrow-down.svg" alt="arrow pointing down">
+    <img class="header__arrow" id="header__arrow" src="./dist/images/icon-arrow-down.svg" alt="arrow pointing down">
   </header>
 
   <section class="intro">
   </section>
   <section class="abouts" id="about">
     <picture>
-      <source srcset="./images/desktop/image-transform.jpg" media="(min-width: 750px)">
-      <img class="about__image about__image--one" service__image src="./images/mobile/image-transform.jpg"
+      <source srcset="./dist/images/desktop/image-transform.jpg" media="(min-width: 750px)">
+      <img class="about__image about__image--one" service__image src="./dist/images/mobile/image-transform.jpg"
         alt="white chicken egg on vivid yellow background">
     </picture>
 
@@ -50,8 +50,8 @@
     </div>
 
     <picture>
-      <source srcset="./images/desktop/image-stand-out.jpg" media="(min-width: 750px)">
-      <img class="about__image  about__image--two" src="./images/mobile/image-stand-out.jpg"
+      <source srcset="./dist/images/desktop/image-stand-out.jpg" media="(min-width: 750px)">
+      <img class="about__image  about__image--two" src="./dist/images/mobile/image-stand-out.jpg"
         alt="pink glass on pink background">
     </picture>
     <div class="about about2" id="about">
@@ -91,14 +91,14 @@
         <p class="testimonial__title">Marketing Director</p>
       </div>
       <div class="testimonial">
-        <img src="./images/image-thomas.jpg" alt="Thomas">
+        <img src="./dist/images/image-thomas.jpg" alt="Thomas">
         <p class="testimonial__statement">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
         </p>
         <p class="testimonial__name">Thomas S.</p>
         <p class="testimonial__title">Chief Operating Officer</p>
       </div>
       <div class="testimonial">
-        <img src="./images/image-jennie.jpg" alt="Jennie">
+        <img src="./dist/images/image-jennie.jpg" alt="Jennie">
         <p class="testimonial__statement">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
         </p>
         <p class="testimonial__name">Jennie F.</p>
@@ -108,25 +108,25 @@
   </section>
   <section class="gallery">
     <picture>
-      <source srcset="./images/desktop/image-gallery-milkbottles.jpg" media="(min-width: 1000px)">
-      <img src="./images/mobile/image-gallery-milkbottles.jpg" alt="milk bottles with sky blue background with clouds">
+      <source srcset="./dist/images/desktop/image-gallery-milkbottles.jpg" media="(min-width: 1000px)">
+      <img src="./dist/images/mobile/image-gallery-milkbottles.jpg" alt="milk bottles with sky blue background with clouds">
     </picture>
     <picture>
-      <source srcset="./images/desktop/image-gallery-orange.jpg" media="(min-width: 1000px)">
-      <img src="./images/mobile/image-gallery-orange.jpg" alt="orange sliced in half on white plate">
+      <source srcset="./dist/images/desktop/image-gallery-orange.jpg" media="(min-width: 1000px)">
+      <img src="./dist/images/mobile/image-gallery-orange.jpg" alt="orange sliced in half on white plate">
     </picture>
     <picture>
-      <source srcset="./images/desktop/image-gallery-cone.jpg" media="(min-width: 1000px)">
-      <img src="./images/mobile/image-gallery-cone.jpg" alt="empty waffle cone with sky blue backgroun">
+      <source srcset="./dist/images/desktop/image-gallery-cone.jpg" media="(min-width: 1000px)">
+      <img src="./dist/images/mobile/image-gallery-cone.jpg" alt="empty waffle cone with sky blue backgroun">
     </picture>
     <picture>
-      <source srcset="./images/desktop/image-gallery-sugar-cubes.jpg" media="(min-width: 1000px)">
-      <img src="./images/mobile/image-gallery-sugar-cubes.jpg" alt="stacked sugar cubes with pink background">
+      <source srcset="./dist/images/desktop/image-gallery-sugar-cubes.jpg" media="(min-width: 1000px)">
+      <img src="./dist/images/mobile/image-gallery-sugar-cubes.jpg" alt="stacked sugar cubes with pink background">
     </picture>
 
   </section>
   <footer id="contact">
-    <img src="./images/logo.svg" alt="" class="footer__logo">
+    <img src="./dist/images/logo.svg" alt="" class="footer__logo">
 
     <ul>
       <li><a href="#about">About</a> </li>
@@ -134,10 +134,10 @@
       <li><a href="#testimonials">Projects</a></li>
     </ul>
     <div class="socials">
-      <img src="./images/icon-facebook.svg" alt="facebook" class="social__icon">
-      <img src="./images/icon-instagram.svg" alt="instagram" class="social__icon">
-      <img src="./images/icon-twitter.svg" alt="twitter" class="social__icon">
-      <img src="./images/icon-pinterest.svg" alt="pinterest" class="social__icon">
+      <img src="./dist/images/icon-facebook.svg" alt="facebook" class="social__icon">
+      <img src="./dist/images/icon-instagram.svg" alt="instagram" class="social__icon">
+      <img src="./dist/images/icon-twitter.svg" alt="twitter" class="social__icon">
+      <img src="./dist/images/icon-pinterest.svg" alt="pinterest" class="social__icon">
     </div>
 
   </footer>
@@ -146,7 +146,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     <span>Coded with ❤️ by <a href="mailto:rhynedavid16@gmail.com">David</a>.</span>
   </div>
-  <script src="./src/sunnyside.js"></script>
+  <script src="./dist/src/sunnyside.js"></script>
 </body>
 
 </html>
