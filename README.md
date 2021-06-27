@@ -32,6 +32,7 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
+
 ### Links
 
 - Solution URL: [@github](https://github.com/davidrhyne/sunnyside-agency-landing-page)
