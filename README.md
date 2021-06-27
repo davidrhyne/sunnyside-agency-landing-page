@@ -30,8 +30,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
+![desktop - top](https://user-images.githubusercontent.com/63062052/123549083-132abc00-d72d-11eb-920f-060dad36394c.png)
+![desktop - bottom](https://user-images.githubusercontent.com/63062052/123549111-2e95c700-d72d-11eb-92f0-5ab3515775b7.png)
+![mobile - top](https://user-images.githubusercontent.com/63062052/123549157-584eee00-d72d-11eb-97cf-b4cd62b77e9e.png)
+![mobile - middle](https://user-images.githubusercontent.com/63062052/123549177-71f03580-d72d-11eb-81e2-b6c67865a551.png)
+![mobile - middle](https://user-images.githubusercontent.com/63062052/123549187-7fa5bb00-d72d-11eb-8f35-c446e7212d42.png)
+![mobile - bottom](https://user-images.githubusercontent.com/63062052/123549202-8a605000-d72d-11eb-860a-d1ba53a2862f.png)
 
 ### Links
 
