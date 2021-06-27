@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [@github](https://github.com/davidrhyne/sunnyside-agency-landing-page)
-- Live Site URL: [@github pages](https://davidrhyne.github.io/sunnyside-agency-landing-page/dist/)
+- Live Site URL: [@github pages](https://davidrhyne.github.io/sunnyside-agency-landing-page/)
 
 ## My process
 
