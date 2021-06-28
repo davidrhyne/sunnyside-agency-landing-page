@@ -122,7 +122,7 @@ nav {
     li {
         text-align: center;
         padding: .75em;
-        max-width: 35%;                
+        min-width: 40%;
         margin: 0 auto;
         border-radius: 50px;
        
@@ -136,14 +136,13 @@ nav {
         }
 
         @include mq($menu-break){
-            padding: .75em 1em;
-            min-width: 40%;
-            max-width: unset;
+            padding: .75em 1em 2em;
+            min-width: unset;
             margin: 0;            
         }
 
         @include mq($desktop-break){
-            padding: .75em 1.75em;   
+            padding: .75em 1.75em 2em;   
         }        
     }
 
@@ -198,6 +197,7 @@ nav {
     border-radius: 1em;
     transition: transform 250ms ease-in-out;
 }
+
 
 .hamburger::before,
 .hamburger::after {
