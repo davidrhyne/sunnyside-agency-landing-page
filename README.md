@@ -57,7 +57,7 @@ Users should be able to:
 
 I learned how to use Sass and many of its core features like variables, functions, and mixins.  Likewise, I learn how to use partials and how to implement them with the @use and @forward methods.  
 
-While they were not new topics, I got some really good practice at using absolute and relative positioning.  I must admit that I had only used them in very limited capacities before, but it seemed nature to used that method of the navigation menu and the services section (text overlayed on images).
+While they were not new topics, I got some really good practice at using absolute and relative positioning. I must admit that I had only used them in very limited capacities before, but it seemed natural to use those methods on the navigation menu and the services section (text overlaid on the cherries and whole orange images).
 
 ### Continued development
 
